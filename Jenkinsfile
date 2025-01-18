@@ -14,9 +14,11 @@ pipeline {
         stage('Desplegar aplicación en Equipo Local') {
             steps {
                 script {
-                    // Comando para compilar o ejecutar un archivo Java simple
-                    sh 'javac HolaMundo.java'
-                    sh 'java HolaMundo'
+                    // Comando para compilar o ejecutar un archivo Java simple en Windows
+                    bat '''
+                        javac HolaMundo.java
+                        java HolaMundo
+                    '''
                 }
             }
         }
